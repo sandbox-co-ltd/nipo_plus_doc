@@ -50,3 +50,11 @@ This is a dangerous warning
 ::: details
 This is a details block, which does not work in IE / Edge
 :::
+
+## he2
+
+hogehoge
+
+### he3
+
+mogemoge

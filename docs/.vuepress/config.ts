@@ -11,6 +11,27 @@ export default defineUserConfig<DefaultThemeOptions>({
   theme: '@vuepress/theme-default',
   themeConfig: {
     logo: 'https://vuejs.org/images/logo.png',
+    navbar: [
+      { text: 'root', link: '/' },
+      { text: 'rule', link: '/rule/' },
+      {
+        text: 'Group',
+        children: [
+          {
+            text: 'SubGroup',
+            children: ['/group/sub/foo.md', '/group/sub/bar.md'],
+          },
+        ],
+      }
+    ],
+    sidebar: {
+      '/rule/': [
+        {
+          text: 'Guide',
+          children: ['/rule/README.md', '/rule/one.md'],
+        },
+      ],
+    }
   },
   head: [
     ['meta',{ name:"keywords", content:"クラウド,日報,nipo plus"}],
