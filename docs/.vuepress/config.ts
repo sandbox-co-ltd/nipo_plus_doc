@@ -1,4 +1,5 @@
 import { defineUserConfig } from 'vuepress'
+import { path } from '@vuepress/utils'
 import type { DefaultThemeOptions } from 'vuepress'
 
 export default defineUserConfig<DefaultThemeOptions>({
@@ -6,6 +7,11 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'ja-JP',
   title: 'Nipo Plus',
   description: 'クラウド型カスタマイズ可能な日報アプリ。スマホ・PC対応',
+  plugins: [
+    ['@vuepress/register-components', {
+      componentsDir: path.resolve(__dirname, './components'),
+    }],
+  ],
 
   // theme and its config
   theme: '@vuepress/theme-default',
@@ -16,6 +22,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       { text: 'rule', link: '/rule/' },
       {
         text: 'Group',
+        
         children: [
           {
             text: 'SubGroup',
@@ -28,7 +35,11 @@ export default defineUserConfig<DefaultThemeOptions>({
       '/rule/': [
         {
           text: 'Guide',
-          children: ['/rule/README.md', '/rule/one.md'],
+          children: [
+            { text: 'りーどめー', link: '/rule/README.md' },
+            '/rule/README.md',
+            '/rule/one.md'
+          ],
         },
       ],
     }
