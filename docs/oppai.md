@@ -33,3 +33,20 @@ This is default theme built-in `<Badge />` component <Badge text="注目" />
 
 絶対パス？
 ![VuePress Logo](/images/logo.png)
+
+
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
