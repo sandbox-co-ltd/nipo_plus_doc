@@ -1,23 +1,22 @@
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import { defineHopeConfig } from "vuepress-theme-hope";
+import themeConfig from "./themeConfig";
 
-export default defineUserConfig<DefaultThemeOptions>({
-  // site config
-  lang: 'ja-JP',
-  title: 'Nipo Plus',
-  description: 'クラウド型カスタマイズ可能な日報アプリ。スマホ・PC対応',
+export default defineHopeConfig({
+  lang: "en-US",
+  title: "Theme こんにちわ",
+  description: "A demo for vuepress-theme-hope",
 
-  // theme and its config
-  theme: '@vuepress/theme-default',
-  themeConfig: {
-    logo: 'https://vuejs.org/images/logo.png',
-  },
+  base: "/",
+
   head: [
-    ['meta',{ name:"keywords", content:"クラウド,日報,nipo plus"}],
-    ['meta',{ name:"og:title", content:"Nipo Plus-クラウド日報"}],
-    ['meta',{ name:"og:description", content:"スマホ・PCからかんたんに日報作成が可能。テンプレートのカスタマイズ・集計・コメントなど完備"}],
-    ['meta',{ name:"og:type", content:"website"}],
-    ['meta',{ name:"og:url", content:"https://nipo-plus-doc.sndbox.jp"}],
-    ['meta',{ name:"og:image", content: '/logo.png' }]
-  ]
-})
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
+      },
+    ],
+  ],
+
+  themeConfig,
+});
