@@ -7,6 +7,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'ja-JP',
   title: 'Nipo Plus',
   description: 'クラウド型カスタマイズ可能な日報アプリ。スマホ・PC対応',
+  dest: 'docs/',
   plugins: [
     ['@vuepress/register-components', {
       componentsDir: path.resolve(__dirname, './components'),
